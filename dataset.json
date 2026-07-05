@@ -1,17 +1,158 @@
 [
   {
-    "task": "Parse an AWS CloudWatch log entry and extract the timestamp, log level, and message using a regular expression",
-    "format": "regex",
-    "solution_criteria": "The regex should correctly capture three groups: ISO 8601 timestamp, log level (INFO/ERROR/WARN/DEBUG), and the remaining message text from a typical CloudWatch log format like '2024-01-15T10:30:45Z [INFO] Application started successfully'"
+    "prompt_inputs": {
+      "hieght": "178",
+      "weight": "72",
+      "goal": "maintain",
+      "restrictions": "gluten-free, dairy-free"
+    },
+    "solution_criteria": [
+      "Meal plan covers all three meals for one day",
+      "All meals comply with both gluten-free and dairy-free restrictions",
+      "Plan is nutritionally balanced for athletic performance and recovery"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with multiple dietary restrictions (gluten-free and dairy-free athlete) with limited food options"
   },
   {
-    "task": "Create a Python function that takes an AWS S3 bucket name and object key, then returns the appropriate S3 URI in the format s3://bucket-name/object-key",
-    "format": "python",
-    "solution_criteria": "Function should accept bucket name and object key as parameters, handle edge cases like trailing slashes, and return a properly formatted S3 URI string"
+    "prompt_inputs": {
+      "hieght": "178",
+      "weight": "72",
+      "goal": "maintain",
+      "restrictions": "vegan"
+    },
+    "solution_criteria": [
+      "Meal plan covers all 3 meals for one day",
+      "All foods are vegan-compliant with no animal products",
+      "Plan provides adequate protein, carbohydrates, and healthy fats for athletic performance",
+      "Plan is concise and practical to prepare"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with dietary restrictions (vegan athlete) while meeting complete nutritional requirements"
   },
   {
-    "task": "Generate a JSON IAM policy document that allows read-only access to all objects in a specific AWS S3 bucket",
-    "format": "json",
-    "solution_criteria": "JSON should be valid AWS IAM policy format with appropriate Version, Statement array, Effect, Action (s3:GetObject), and Resource fields targeting a specific bucket ARN"
+    "prompt_inputs": {
+      "hieght": "180",
+      "weight": "75",
+      "goal": "muscle_gain",
+      "restrictions": "vegetarian, no access to oven or stove"
+    },
+    "solution_criteria": [
+      "All meals require minimal cooking equipment (microwave, kettle, or no cooking)",
+      "Meal plan provides adequate protein for muscle gain despite vegetarian restriction",
+      "Plan is compact and fits a 1-day format with breakfast, lunch, dinner, and snacks"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with minimal cooking time/equipment availability (traveling athlete with limited resources)"
+  },
+  {
+    "prompt_inputs": {
+      "hieght": "172 cm",
+      "weight": "65 kg",
+      "goal": "muscle gain",
+      "restrictions": "vegetarian, nut allergy"
+    },
+    "solution_criteria": [
+      "Meal plan covers all three meals for one day with appropriate portions for a growing adolescent athlete",
+      "Meets elevated protein requirements (1.6-2.0g per kg body weight) while adhering to vegetarian diet and nut allergy restriction",
+      "Includes caloric surplus appropriate for muscle gain goal in adolescent"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a young adolescent athlete with higher growth and development nutritional needs"
+  },
+  {
+    "prompt_inputs": {
+      "hieght": "172",
+      "weight": "68",
+      "goal": "maintain weight while building lean muscle",
+      "restrictions": "vegetarian, no dairy"
+    },
+    "solution_criteria": [
+      "Meal plan covers all 3 meals and includes iron-rich vegetarian sources (legumes, leafy greens, fortified grains) to support female athlete's iron needs",
+      "Total daily calories and macronutrient distribution are appropriate for weight maintenance with muscle building goal",
+      "Plan is concise and practical for a single day with specific meal suggestions"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a female athlete accounting for iron intake and hormonal considerations"
+  },
+  {
+    "prompt_inputs": {
+      "hieght": "178 cm",
+      "weight": "72 kg",
+      "goal": "Prepare for marathon race in 3 days with optimal energy stores",
+      "restrictions": "Vegetarian, no nuts"
+    },
+    "solution_criteria": [
+      "Meal plan spans exactly 1 day with breakfast, lunch, dinner, and snacks",
+      "Emphasizes high carbohydrate content (60-65% of calories) to support endurance performance",
+      "Respects vegetarian diet and excludes nuts",
+      "Includes realistic, specific food items with approximate portions"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with an endurance athlete (marathon runner) requiring high carbohydrate intake and sustained energy"
+  },
+  {
+    "prompt_inputs": {
+      "hieght": "183 cm",
+      "weight": "78 kg",
+      "goal": "maintain weight while improving endurance and tactical sharpness",
+      "restrictions": "lactose intolerant"
+    },
+    "solution_criteria": [
+      "Meal plan covers all meals for one full day and is organized chronologically",
+      "Provides adequate carbohydrates and protein to support soccer performance and recovery",
+      "All meals and snacks are lactose-free",
+      "Plan is compact and concise, fitting within 1-2 pages"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a sport-specific athlete (soccer player) balancing cardio demands with tactical performance"
+  },
+  {
+    "prompt_inputs": {
+      "hieght": "180 cm",
+      "weight": "85 kg",
+      "goal": "muscle gain and strength recovery",
+      "restrictions": "none"
+    },
+    "solution_criteria": [
+      "Meal plan covers 4-5 meals distributed throughout the day",
+      "Total daily protein meets or exceeds 1.6g per kg of body weight (136g minimum)",
+      "Includes pre and post-workout nutrition timing for strength training",
+      "Provides practical, specific meal suggestions with approximate portions"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength/power athlete (weightlifter) emphasizing protein and muscle recovery needs"
+  },
+  {
+    "prompt_inputs": {
+      "hieght": "180",
+      "weight": "85",
+      "goal": "78",
+      "restrictions": "vegetarian, no nuts"
+    },
+    "solution_criteria": [
+      "Meal plan contains exactly 3 meals covering one full day",
+      "Total daily calories support a caloric deficit appropriate for cutting phase (approximately 500-750 kcal below maintenance)",
+      "All meals comply with vegetarian and nut-free restrictions",
+      "Meals are practical and quick to prepare for an athlete"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with an athlete in a cutting/weight-loss phase with caloric deficit parameters"
+  },
+  {
+    "prompt_inputs": {
+      "hieght": "180 cm",
+      "weight": "75 kg",
+      "goal": "muscle gain",
+      "restrictions": "vegetarian, no nuts"
+    },
+    "solution_criteria": [
+      "All meals are vegetarian and nut-free",
+      "Total daily cost does not exceed $15 USD",
+      "Provides adequate protein (minimum 1.6g per kg bodyweight) for muscle gain goal",
+      "Covers breakfast, lunch, dinner, and 1-2 snacks in a logical daily sequence"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with budget constraints (college athlete on limited funds) requiring cost-effective options"
   }
 ]
